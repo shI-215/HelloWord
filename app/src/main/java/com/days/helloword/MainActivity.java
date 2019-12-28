@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView tv_text;
     private Button btn_dialog;
     private EditText edt_input;
+    private Button btn_p_bar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +42,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_dialog.setOnClickListener(this);
         edt_input = (EditText) findViewById(R.id.edt_input);
         edt_input.setOnClickListener(this);
+        btn_p_bar = (Button) findViewById(R.id.btn_p_bar);
+        btn_p_bar.setOnClickListener(this);
     }
 
     @Override
@@ -57,9 +60,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent);
                 break;
             case R.id.btn_dialog:
-                Intent intent1 = new Intent();
-                intent1.setClass(context, DialogActivity.class);
-                startActivity(intent1);
+                startActivity(new Intent(context, DialogActivity.class));
+                break;
+            case R.id.btn_p_bar:
+                startActivity(new Intent(context, FristActivity.class));
                 break;
         }
     }

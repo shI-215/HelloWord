@@ -6,6 +6,10 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <com.days.helloword.TitleActivity
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
     <TextView
         android:id="@+id/tv_text"
         android:layout_width="wrap_content"
@@ -16,7 +20,15 @@
         android:id="@+id/btn_dialog"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="dialog" />
+        android:text="dialog"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_p_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ProgressBar"
+        android:textAllCaps="false" />
 
     <EditText
         android:id="@+id/edt_input"
